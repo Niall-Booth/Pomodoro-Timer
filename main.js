@@ -75,7 +75,6 @@ function Timer(currentTimer, mode){
             alarm.currentTime = 0;
             alarm.play();
             reset(mode);
-            alert("Timer complete time to switch");
             return
         }
         secs--
@@ -88,9 +87,6 @@ $("#work-button").on("click", () => changeScene(workTimer, "work"));
 $("#break-button").on("click", ()=> changeScene(breakTimer, "break"));
 
 $("#start-stop-button").on("click", function(){
-    alarm.play().then(()=>{
-        alarm.pause();
-    });
     if($(".selector").hasClass("work-selected")){
         if($(this).text() == "Start"){
             workTimer = $("#countdown").text();
