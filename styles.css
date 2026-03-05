@@ -272,7 +272,7 @@ textarea{
     }
 
     #tasks{
-        min-height: 300px;
+        min-height: 250px;
     }
 
     #tasks h1{
@@ -285,5 +285,9 @@ textarea{
     #new-task-div, #task-display-div{
         min-width: 80%;
         box-shadow: 0 4px 10px black;
+    }
+
+    input, textarea{
+        font-size: 16px;
     }
 }
