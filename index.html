@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My-Pomodoro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <h1 class="heading-font">My Pomodoro</h1>
+    </nav>
+    <section>
+        <img id="background-img-1" src="images/sunset-beach.png" alt="sunset beach image">
+        <img id="background-img-2" src="images/moon-light-ocean.png" alt="moon light ocean image">
+        <div id="task-display-div">
+            <h2 class="heading-font" id="current-task-name">Task Name</h2>
+            <form action="">
+                <textarea name="current-task-description" id="curent-task-description" rows="20" readonly></textarea>
+            </form>
+            <button id="complete-button">Complete</button>
+            <button id="close-button">Close</button>
+        </div>
+        <div id="new-task-div">
+            <h2 class="heading-font">New Task</h2>
+            <form action="">
+                <input type="text" id="task-name" placeholder="Task Name" autocomplete="off">
+                <textarea name="task-description" id="task-description" placeholder="Describe your task..." rows="20"></textarea>
+                <button id="submit-button" type="button">Submit</button>
+            </form>
+            <button id="cancel-button">Cancel</button>
+        </div>
+        <div id="timer" class="timer-work">
+            <div id="selector-panel">
+                <button id="work-button" class="selector work-selected work-active">Work</button>
+                <button id="break-button" class="selector work-selected">Break</button>
+            </div>
+            <h1 contenteditable="true" class="heading-font" id="countdown">00:00</h1>
+            <button id="start-stop-button">Start</button>
+        </div>
+        <div id="tasks">
+            <h1 class="heading-font">Tasks</h1>
+            <button id="new-task">+</button>
+        </div>
+    </section>
+    <footer>
+        <h3 class="heading-font"></h3>
+        <audio src="calm_relaxing_timer_melody.mp3" id="alarm"></audio>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        const date = new Date().getFullYear();
+        $("footer h3").text(`Niall Booth Pomodoro - ${date}`);
+    </script>
+    <script type="module" src="main.js"></script>
+</body>
+</html>
