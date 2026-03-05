@@ -103,6 +103,7 @@ $("#start-stop-button").on("click", function(){
 //New Task
 
 function closeTaskInput(){
+    document.body.style.overflow = "auto";
     animate(
         "#new-task-div",
         {
@@ -115,6 +116,7 @@ function closeTaskInput(){
 }
 
 function closeTaskDisplay(){
+    document.body.style.overflow = "auto";
     animate(
         "#task-display-div",
         {
@@ -127,6 +129,7 @@ function closeTaskDisplay(){
 }
 
 $("#new-task").on("click", function(){
+    //document.body.style.overflow = "hidden";
     $("#new-task-div").css("display","flex");
     $("#task-name").val("");
     $("#task-description").val("");
@@ -160,6 +163,7 @@ $("#cancel-button").on("click", ()=>closeTaskInput())
 
 //Open Task
 $(document).on("click", ".next-task",function(){
+    document.body.style.overflow = "hidden";
     let title = $(this).find(".task-head").text();
     currentSelectedTask = $(this);
     let description = tasks[title];
@@ -185,7 +189,6 @@ $("#complete-button").on("click", function(){
         "z-index" : 1,
         "width" : "80%",
         "left" : "10%",
-        "top" : "30%",
         "position" : "absolute"
     })
     currentSelectedTask.append(newHR);
