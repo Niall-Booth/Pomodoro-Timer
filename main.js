@@ -9,6 +9,9 @@ let timer = null;
 let tasks = {};
 let currentSelectedTask;
 
+//alarm variable
+let alarm = document.getElementById("alarm");
+
 //Reset
 function reset(mode){
     clearInterval(timer);
@@ -69,7 +72,6 @@ function Timer(currentTimer, mode){
         $("title").text(`${displayMins}:${displaySecs} - ${phrase}`);
 
         if(secs == -1){
-            let alarm = document.getElementById("alarm");
             alarm.currentTime = 0;
             alarm.play();
             reset(mode);
@@ -86,6 +88,9 @@ $("#work-button").on("click", () => changeScene(workTimer, "work"));
 $("#break-button").on("click", ()=> changeScene(breakTimer, "break"));
 
 $("#start-stop-button").on("click", function(){
+    alarm.play().then(()=>{
+        alarm.pause();
+    });
     if($(".selector").hasClass("work-selected")){
         if($(this).text() == "Start"){
             workTimer = $("#countdown").text();
