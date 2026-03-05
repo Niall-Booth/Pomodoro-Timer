@@ -281,4 +281,9 @@ textarea{
     #countdown{
         font-size: 70px;
     }
+
+    #new-task-div, #task-display-div{
+        min-width: 80%;
+        box-shadow: 0 4px 10px black;
+    }
 }
