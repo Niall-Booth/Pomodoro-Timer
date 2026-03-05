@@ -142,6 +142,10 @@ section{
 
 /*Tasks styles*/
 
+hr{
+    top: 25%,
+}
+
 form{
     width: 90%;
     text-align: center;
@@ -303,5 +307,9 @@ textarea{
 
     input, textarea{
         font-size: 16px;
+    }
+
+    hr{
+        top: 20%,
     }
 }
