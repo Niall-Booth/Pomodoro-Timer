@@ -7,6 +7,14 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    height: 100dvh;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
 /*Nav and Footer styles*/
 nav, footer{
     display: flex;
