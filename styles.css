@@ -3,6 +3,10 @@
     color: inherit;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /*Nav and Footer styles*/
 nav, footer{
     display: flex;
