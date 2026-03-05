@@ -1,10 +1,3 @@
-.help{
-    background-color: #6AECE1;
-    background-color: #26CCC2;
-    background-color: #8494FF;
-    background-color: #6367FF;
-}
-
 body{
     padding: 0;
     margin: 0;
@@ -17,14 +10,14 @@ nav, footer{
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 10vh;
+    height: 10dvh;
     color: white;
 }
 
 
 section{
     width: 100%;
-    height: 80vh;
+    height: 80dvh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -65,9 +58,11 @@ section{
 }
 
 #background-img-1, #background-img-2{
-    min-width: 100%;
-    height: 100vh;
-    position: absolute;
+    position: fixed;
+    top:0;
+    width: 100%;
+    height: 100dvh;
+    object-fit: cover;
 }
 
 #background-img-1{
@@ -179,11 +174,10 @@ textarea{
 
 #new-task-div, #task-display-div{
     position: absolute;
-    min-height: 90%;
+    height: auto;
     min-width: 30%;
     background: white;
     border-radius: 30px;
-    display: flex;
     flex-direction: column;
     align-items: center;
     opacity: 0;
@@ -255,6 +249,36 @@ textarea{
     font-size: 10px;
 }
 
+/*desktop*/
+@media(max-width: 1921px){
 
+}
 
+/*phone*/
+@media(max-width: 600px){
 
+    section{
+        flex-direction: column;
+        min-height: 100dvh;
+        justify-content: center;
+        justify-content: start;
+    }
+
+    #timer,#tasks{
+        width: 70%;
+        min-height: auto;
+        padding: 25px;
+        margin: 0;
+    }
+
+    #tasks{
+        min-height: 300px;
+    }
+
+    #tasks h1{
+        margin: 0;
+    }
+    #countdown{
+        font-size: 70px;
+    }
+}
